@@ -13,7 +13,6 @@ which group of actions are realizing the representation in the backend - that is
 backend module must be *registered*. This is done in the file :file:`ext_tables.php` in the
 root directory of our extension. Lets look at our blog example how it defines a backend module::
 
-    if (TYPO3_MODE === 'BE') {
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
             'Vendor.ExtensionName',
             'web',          // Main area
@@ -30,7 +29,6 @@ root directory of our extension. Lets look at our blog example how it defines a 
                 'labels'    => 'LLL:EXT:ext_key/Resources/Private/Language/locallang_mod.xml',
             ],
         );
-    }
 
 In line 2 the backend module is registered using the API function ``\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule``.
 This function needs the name of the main area where the module can be found later, in our case this
